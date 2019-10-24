@@ -6,17 +6,17 @@ function Book() {
   console.log(books)
 
   return (
-    <>
+    <div className='bookContainer'>
     {books.map((book, index) => (
-        <div className='bookContainer'>
+      <div className='book'>
         <div className='bookImage' key={index}>
           <img src={book.image} alt={book.title} />
         </div>
-        <h1>Title: {book.title}</h1>
+        <h2>Title: {book.title}</h2>
         <h3>Price: {book.price}</h3>
       </div>
     ))}
-    </>
+    </div>
   )
 }
 

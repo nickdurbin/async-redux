@@ -6,7 +6,6 @@ import Book from './components/books/Book';
 
 function App() {
   const isLoading = useSelector(state => state.isLoading)
-  const error = useSelector(state => state.error)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -16,7 +15,7 @@ function App() {
   return (
     <div className='App'>
       <h1>BOOK IT</h1>
-      {isLoading ? <div className='spinner' /> : <Book />}
+      { isLoading ? <div className='spinner' /> : <Book /> }
     </div>
   )
 }

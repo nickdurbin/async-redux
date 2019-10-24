@@ -17,7 +17,7 @@ export function reducer(state = initialState, action) {
       return {
         ...state,
           isLoading: !state.isLoading,
-          books: [ ...state.books, action.payload]
+          books: action.payload.books
       }
     case GET_BOOKS_ERROR:
       return {
