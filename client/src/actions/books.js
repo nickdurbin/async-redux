@@ -13,5 +13,5 @@ export const getBooks = () => dispatch => {
     .then(res =>
       dispatch({ type: GET_BOOKS_SUCCESS, payload: res.data })
     )
-    .catch(err => dispatch({ type: GET_BOOKS_ERROR, payload: err }))
+    .catch(err => dispatch({ type: GET_BOOKS_ERROR, payload: err.response }))
 }

@@ -11,18 +11,18 @@ export function reducer(state = initialState, action) {
     case GET_BOOKS_REQUEST:
       return {
         ...state,
-        isLoading: !state.isLoading
+        isLoading: true
       }
     case GET_BOOKS_SUCCESS:
       return {
         ...state,
-          isLoading: !state.isLoading,
+          isLoading: false,
           books: action.payload.books
       }
     case GET_BOOKS_ERROR:
       return {
         ...state,
-        isLoading: !state.isLoading,
+        isLoading: true,
         error: action.payload
       }
     default:
